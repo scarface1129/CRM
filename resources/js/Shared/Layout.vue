@@ -19,7 +19,7 @@
     </header>
   </section>
 
-  <section class="p-6">
+  <section class="container p-6">
     <div class="mx-w-3xl mx-auto">
       <!-- <iframe
       class="mb-6"

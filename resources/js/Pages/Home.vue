@@ -1,6 +1,6 @@
 <template>
   <Head>
-    <title head-key="title">My App - Home</title>
+    <title head-key="title">Home</title>
     <meta
       name="description"
       content="Welcome to the Home Page"
@@ -11,6 +11,6 @@
 </template>
 
 <script setup>
-import { Head } from "@inertiajs/vue3";
+// import { Head } from "@inertiajs/vue3";
 
 </script>
