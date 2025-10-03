@@ -1,31 +1,18 @@
 <?php
 
+use App\Http\Controllers\SettingsController;
 use App\Models\User;
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return Inertia::render('Home');
 });
 
-Route::get('/users', function () {
-    // $users  = User::all()->map(fn($user) => [
-    //     'name' => $user->name,
-    //     'id' => $user->id,
-    //     'email' => $user->email,
-    //     'created_at' => $user->created_at->toDateTimeString()
-    // ]);
-    $users = User::paginate(10);
-    return Inertia::render('Users',
-        [
-            'users' => $users,
-        ]
-    );
-});
+Route::get('/users', [UserController::class, 'index'])->name('users.index');
+Route::get('/users/create', [UserController::class, 'create'])->name('users.index');
 
-Route::get('/settings', function () {
-    return Inertia::render('Settings');
-});
+Route::get('/settings', [SettingsController::class, 'index'])->name('settings.index');
 
-Route::post('/logout', function () {
-});
+Route::post('/logout', function () {});

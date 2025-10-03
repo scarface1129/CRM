@@ -3,6 +3,7 @@ import { createInertiaApp, Link, Head } from '@inertiajs/vue3'
 import NProgress from 'nprogress'
 import { router } from '@inertiajs/vue3'
 import Layout from './Shared/Layout.vue'
+import Pagination from './Shared/pagination.vue'
 
 createInertiaApp({
   resolve: name => {
@@ -20,6 +21,7 @@ createInertiaApp({
       .use(plugin)
       .component('Head', Head)
       .component('Link', Link)
+      .component('Pagination', Pagination)
       .mount(el)
   },
   progress: {
